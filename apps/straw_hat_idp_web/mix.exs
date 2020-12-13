@@ -21,7 +21,7 @@ defmodule StrawHat.IdpWeb.MixProject do
   def application do
     [
       mod: {StrawHat.IdpWeb.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :crypto]
     ]
   end
 

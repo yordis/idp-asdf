@@ -1,11 +1,25 @@
 use Mix.Config
 
+config :straw_hat_idp, StrawHat.Idp.Application,
+  event_store: [
+    adapter: Commanded.EventStore.Adapters.EventStore,
+    event_store: StrawHat.Idp.EventStore
+  ]
+
 config :straw_hat_idp, StrawHat.Idp.Repo,
   username: "postgres",
   password: "postgres",
   database: "straw_hat_idp_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
+config :straw_hat_idp, StrawHat.Idp.EventStore,
+  serializer: Commanded.Serialization.JsonSerializer,
+  username: "postgres",
+  password: "postgres",
+  database: "straw_hat_idp_eventstore_dev",
+  hostname: "localhost",
   pool_size: 10
 
 config :straw_hat_idp_web, StrawHat.IdpWeb.Endpoint,
@@ -44,3 +58,5 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :plug_init_mode, :runtime
 
 config :phoenix, :stacktrace_depth, 20
+
+config :straw_hat_idp, StrawHat.Idp.Mailer, adapter: Bamboo.LocalAdapter

@@ -1,26 +1,7 @@
 defmodule StrawHat.IdpWeb do
-  @moduledoc """
-  The entrypoint for defining your web interface, such
-  as controllers, views, channels and so on.
-
-  This can be used in your application as:
-
-      use StrawHat.IdpWeb, :controller
-      use StrawHat.IdpWeb, :view
-
-  The definitions below will be executed for every view,
-  controller, etc, so keep them short and clean, focused
-  on imports, uses and aliases.
-
-  Do NOT define functions inside the quoted expressions
-  below. Instead, define any helper function in modules
-  and import those modules here.
-  """
-
   def controller do
     quote do
       use Phoenix.Controller, namespace: StrawHat.IdpWeb
-
       import Plug.Conn
       alias StrawHat.IdpWeb.Router.Helpers, as: Routes
     end
@@ -44,7 +25,6 @@ defmodule StrawHat.IdpWeb do
   def router do
     quote do
       use Phoenix.Router
-
       import Plug.Conn
       import Phoenix.Controller
     end
@@ -60,7 +40,6 @@ defmodule StrawHat.IdpWeb do
     quote do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
-
       import StrawHat.IdpWeb.ErrorHelpers
       alias StrawHat.IdpWeb.Router.Helpers, as: Routes
     end

@@ -1,5 +1,15 @@
 use Mix.Config
 
+config :vex,
+  sources: [
+    StrawHat.Idp.Validators,
+    Vex.Validators
+  ]
+
+config :straw_hat_idp, event_stores: [StrawHat.Idp.EventStore]
+
+config :commanded_ecto_projections, repo: StrawHat.Idp.Repo
+
 config :straw_hat_idp,
   namespace: StrawHat.Idp,
   ecto_repos: [StrawHat.Idp.Repo]

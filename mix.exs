@@ -17,7 +17,8 @@ defmodule StrawHat.Idp.Umbrella.MixProject do
 
   defp aliases do
     [
-      setup: ["cmd mix setup"]
+      setup: ["cmd mix setup"],
+      reset: ["cmd mix reset"]
     ]
   end
 end

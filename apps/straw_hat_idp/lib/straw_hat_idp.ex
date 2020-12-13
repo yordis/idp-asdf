@@ -1,9 +1,7 @@
 defmodule StrawHat.Idp do
-  @moduledoc """
-  StrawHat.Idp keeps the contexts that define your domain
-  and business logic.
+  use Application
 
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
-  """
+  def start(_type, _args) do
+    StrawHat.Idp.Supervisor.start_link()
+  end
 end
