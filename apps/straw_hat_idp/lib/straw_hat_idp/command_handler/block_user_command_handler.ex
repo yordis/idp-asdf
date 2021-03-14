@@ -3,7 +3,7 @@ defmodule StrawHat.Idp.Command.BlockUserCommandHandler do
 
   alias StrawHat.Idp.Command.BlockUserCommand
   alias StrawHat.Idp.Entity.UserEntity
-  alias StrawHat.Idp.Event.UserSuspended
+  alias StrawHat.Idp.Event.UserBlocked
 
   def handle(%UserEntity{} = user, %BlockUserCommand{} = command) do
     [

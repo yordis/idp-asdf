@@ -34,4 +34,9 @@ defmodule StrawHat.Idp.Router.UserRouter do
     to: StrawHat.Idp.Command.BlockUserCommandHandler,
     aggregate: UserEntity
   )
+
+  dispatch(StrawHat.Idp.Command.UnBlockUserCommand,
+    to: StrawHat.Idp.Command.UnBlockUserCommandHandler,
+    aggregate: UserEntity
+  )
 end
