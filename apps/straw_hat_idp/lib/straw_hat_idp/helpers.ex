@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Helpers do
-  defmodule Map do
+  defmodule MapHelpers do
     def new(attrs, target) do
       struct(target, attrs)
     end

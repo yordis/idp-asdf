@@ -11,6 +11,6 @@ defmodule StrawHat.Idp.Command.CreateMagicLinkCommand do
   end
 
   def new(attrs) do
-    Helpers.Map.new(attrs, __MODULE__)
+    Helpers.MapHelpers.new(attrs, __MODULE__)
   end
 end

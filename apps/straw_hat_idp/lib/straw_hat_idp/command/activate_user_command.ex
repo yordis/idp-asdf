@@ -8,6 +8,6 @@ defmodule StrawHat.Idp.Command.ActivateUserCommand do
   end
 
   def new(attrs) do
-    Helpers.Map.new(attrs, __MODULE__)
+    Helpers.MapHelpers.new(attrs, __MODULE__)
   end
 end

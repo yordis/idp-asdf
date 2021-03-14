@@ -5,7 +5,7 @@ defmodule StrawHat.Idp.Command.SuspendUserCommandHandler do
   alias StrawHat.Idp.Entity.UserEntity
   alias StrawHat.Idp.Event.UserSuspended
 
-  def handle(%UserEntity{} = user, %SuspendUserCommand{} = command) do
+  def handle(%UserEntity{} = _user, %SuspendUserCommand{} = command) do
     [
       %UserSuspended{
         user_id: command.user_id

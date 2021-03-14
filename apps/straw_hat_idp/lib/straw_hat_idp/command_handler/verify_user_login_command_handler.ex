@@ -5,7 +5,7 @@ defmodule StrawHat.Idp.Command.VerifyUserLoginCommandHandler do
   alias StrawHat.Idp.Entity.UserEntity
   alias StrawHat.Idp.Event.UserLoginVerified
 
-  def handle(%UserEntity{} = user, %VerifyUserLoginCommand{} = command) do
+  def handle(%UserEntity{} = _user, %VerifyUserLoginCommand{} = command) do
     [
       %UserLoginVerified{
         user_id: command.user_id

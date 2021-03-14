@@ -10,7 +10,7 @@ defmodule StrawHat.Idp.Command.ConsumeMagicLinkCommand do
 
   def new(attrs) do
     attrs
-    |> Helpers.Map.new(__MODULE__)
+    |> Helpers.MapHelpers.new(__MODULE__)
     |> Map.put(:session_id, Helpers.generate_uuid())
   end
 end

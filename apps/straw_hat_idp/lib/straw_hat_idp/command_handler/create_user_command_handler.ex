@@ -1,10 +1,8 @@
 defmodule StrawHat.Idp.CommandHandler.CreateUserCommandHandler do
   @behaviour Commanded.Commands.Handler
 
-  alias StrawHat.Idp.ValueObject.ActivationWorkflow
   alias StrawHat.Idp.Command.CreateUserCommand
   alias StrawHat.Idp.Entity.UserEntity
-  alias StrawHat.Idp.ValueObject.UserStatus
   alias Commanded.Aggregate.Multi
 
   alias StrawHat.Idp.Event.{
@@ -12,9 +10,7 @@ defmodule StrawHat.Idp.CommandHandler.CreateUserCommandHandler do
     UserStaged,
     UserProvisioned,
     UserActivated,
-    UserLoginVerified,
-    UserActivationRequested,
-    UserMagicLinkCreated
+    UserLoginVerified
   }
 
   def handle(%UserEntity{user_id: nil} = user, %CreateUserCommand{} = command) do

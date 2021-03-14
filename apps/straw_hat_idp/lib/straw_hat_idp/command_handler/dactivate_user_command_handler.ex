@@ -5,7 +5,7 @@ defmodule StrawHat.Idp.Command.DeactivateUserCommandHandler do
   alias StrawHat.Idp.Entity.UserEntity
   alias StrawHat.Idp.Event.UserDeactivated
 
-  def handle(%UserEntity{} = user, %DeactivateUserCommand{} = command) do
+  def handle(%UserEntity{} = _user, %DeactivateUserCommand{} = command) do
     [
       %UserDeactivated{
         user_id: command.user_id

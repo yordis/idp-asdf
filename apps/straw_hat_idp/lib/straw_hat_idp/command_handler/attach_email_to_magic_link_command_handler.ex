@@ -5,7 +5,7 @@ defmodule StrawHat.Idp.Command.AttachEmailToMagicLinkCommandHandler do
   alias StrawHat.Idp.Entity.MagicLinkEntity
   alias StrawHat.Idp.Event.MagicLinkEmailAttached
 
-  def handle(%MagicLinkEntity{} = magiclink, %AttachEmailToMagicLinkCommand{} = command) do
+  def handle(%MagicLinkEntity{} = _magiclink, %AttachEmailToMagicLinkCommand{} = command) do
     [
       %MagicLinkEmailAttached{
         user_id: command.user_id,

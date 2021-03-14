@@ -5,7 +5,7 @@ defmodule StrawHat.Idp.Command.ConsumeMagicLinkCommandHandler do
   alias StrawHat.Idp.Entity.MagicLinkEntity
   alias StrawHat.Idp.Event.MagicLinkConsumed
 
-  def handle(%MagicLinkEntity{} = magiclink, %ConsumeMagicLinkCommand{} = command) do
+  def handle(%MagicLinkEntity{} = _magiclink, %ConsumeMagicLinkCommand{} = command) do
     [
       %MagicLinkConsumed{
         user_id: command.user_id

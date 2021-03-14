@@ -5,7 +5,7 @@ defmodule StrawHat.Idp.CommandHandler.CreateMagicLinkCommandHandler do
   alias StrawHat.Idp.Entity.MagicLinkEntity
   alias StrawHat.Idp.Event.MagicLinkCreated
 
-  def handle(%MagicLinkEntity{} = magiclink, %CreateMagicLinkCommand{} = command) do
+  def handle(%MagicLinkEntity{} = _magiclink, %CreateMagicLinkCommand{} = command) do
     [
       %MagicLinkCreated{
         user_id: command.user_id,
