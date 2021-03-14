@@ -37,4 +37,10 @@ defmodule StrawHat.Idp.Users do
     |> StrawHat.Idp.Command.CreateSessionFromMagicLinkCommand.new()
     |> Application.dispatch()
   end
+
+  def activate_user(attrs \\ %{}) do
+    attrs
+    |> StrawHat.Idp.Command.ActivateUserCommand.new()
+    |> Application.dispatch()
+  end
 end

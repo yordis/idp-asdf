@@ -3,10 +3,7 @@ defmodule StrawHat.Idp.CommandHandler.CreateMagicLinkCommandHandler do
 
   alias StrawHat.Idp.Command.CreateMagicLinkCommand
   alias StrawHat.Idp.Entity.MagicLinkEntity
-
-  alias StrawHat.Idp.Event.{
-    MagicLinkCreated
-  }
+  alias StrawHat.Idp.Event.MagicLinkCreated
 
   def handle(%MagicLinkEntity{} = magiclink, %CreateMagicLinkCommand{} = command) do
     [

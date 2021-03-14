@@ -3,10 +3,7 @@ defmodule StrawHat.Idp.Command.AttachEmailToMagicLinkCommandHandler do
 
   alias StrawHat.Idp.Command.AttachEmailToMagicLinkCommand
   alias StrawHat.Idp.Entity.MagicLinkEntity
-
-  alias StrawHat.Idp.Event.{
-    MagicLinkEmailAttached
-  }
+  alias StrawHat.Idp.Event.MagicLinkEmailAttached
 
   def handle(%MagicLinkEntity{} = magiclink, %AttachEmailToMagicLinkCommand{} = command) do
     [
