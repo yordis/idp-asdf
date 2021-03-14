@@ -15,6 +15,11 @@ defmodule StrawHat.Idp.Router.UserRouter do
     aggregate: UserEntity
   )
 
+  dispatch(StrawHat.Idp.Command.DeactivateUserCommand,
+    to: StrawHat.Idp.CommandHandler.DeactivateUserCommandHandler,
+    aggregate: UserEntity
+  )
+
   dispatch(StrawHat.Idp.Command.VerifyUserLoginCommand,
     to: StrawHat.Idp.Command.VerifyUserLoginCommandHandler,
     aggregate: UserEntity
