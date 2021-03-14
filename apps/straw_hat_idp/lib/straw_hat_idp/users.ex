@@ -55,4 +55,10 @@ defmodule StrawHat.Idp.Users do
     |> StrawHat.Idp.Command.SuspendUserCommand.new()
     |> Application.dispatch()
   end
+
+  def block_user(attrs \\ %{}) do
+    attrs
+    |> StrawHat.Idp.Command.BlockUserCommand.new()
+    |> Application.dispatch()
+  end
 end
