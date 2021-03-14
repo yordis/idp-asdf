@@ -24,4 +24,9 @@ defmodule StrawHat.Idp.Router.UserRouter do
     to: StrawHat.Idp.Command.VerifyUserLoginCommandHandler,
     aggregate: UserEntity
   )
+
+  dispatch(StrawHat.Idp.Command.SuspendUserCommand,
+    to: StrawHat.Idp.Command.SuspendUserCommandHandler,
+    aggregate: UserEntity
+  )
 end

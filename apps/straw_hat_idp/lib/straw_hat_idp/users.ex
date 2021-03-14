@@ -49,4 +49,10 @@ defmodule StrawHat.Idp.Users do
     |> StrawHat.Idp.Command.DeactivateUserCommand.new()
     |> Application.dispatch()
   end
+
+  def suspend_user(attrs \\ %{}) do
+    attrs
+    |> StrawHat.Idp.Command.SuspendUserCommand.new()
+    |> Application.dispatch()
+  end
 end
