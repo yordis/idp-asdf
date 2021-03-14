@@ -47,6 +47,7 @@ defmodule StrawHat.Idp.MixProject do
       {:vex, "~> 0.8.0"},
       {:bamboo, "~> 1.7"},
       {:straw_hat, "~> 0.6.1"},
+      {:jose, "~> 1.11"},
 
       # Testing
       {:ex_machina, ">= 0.0.0", only: [:test]},
