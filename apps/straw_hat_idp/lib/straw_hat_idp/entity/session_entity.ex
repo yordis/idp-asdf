@@ -4,7 +4,7 @@ defmodule StrawHat.Idp.Entity.SessionEntity do
   embedded_schema do
     field :access_token, :string
     field :refresh_token, :string
-    field :subjectg, :string
+    field :subject, :string
   end
 
   def apply(session, event) do
