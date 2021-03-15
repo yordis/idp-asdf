@@ -1,9 +1,10 @@
 defmodule StrawHat.Idp.Entity.SessionEntity do
-  use StrawHat.Idp.Entity, entity_identifier: :user_id
+  use StrawHat.Idp.Entity, entity_identifier: :session_id
 
   embedded_schema do
     field :access_token, :string
     field :refresh_token, :string
+    field :subjectg, :string
   end
 
   def apply(session, event) do
