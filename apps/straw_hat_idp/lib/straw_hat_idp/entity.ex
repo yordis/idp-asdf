@@ -15,7 +15,7 @@ defmodule StrawHat.Idp.Entity do
       alias StrawHat.Idp.Entity
 
       @entity_identifier_key unquote(entity_identifier)
-      @primary_key {@entity_identifier_key, :binary_id, autogenerate: false}
+      @primary_key {@entity_identifier_key, :binary_id, autogenerate: true}
       @derive Jason.Encoder
 
       def entity_identifier do
