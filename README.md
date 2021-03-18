@@ -4,6 +4,14 @@
 
 - Add support for DID: https://w3c-ccg.github.io/did-primer/
 
+## IDP object
+
+https://developer.okta.com/docs/reference/api/sessions/#idp-object
+
+## AMR object
+
+https://developer.okta.com/docs/reference/api/sessions/#amr-object
+
 ## Session
 
 - **Inactivity Timeout:** Timeframe (in minutes) after which a user's session
@@ -14,6 +22,23 @@
   required to log in again, regardless of their activity. Will be superseded by
   system limits if over 43,200 minutes (30 days) for Developer or Developer Pro
   or 525,600 minutes (365 days) for enterprise plans.
+
+### Data
+
+- **expiresAt:** A timestamp when the Session expires.
+- **userId:** A unique key for the user.
+- **mfaActive:** Indicates whether the user has enrolled an MFA factor.
+- **status:** Current status of the Session.
+
+### Session Statuses
+
+The following values are defined for the status of a Session:
+
+- **ACTIVE:** The Session is established and fully validated.
+- **MFA_REQUIRED:** The Session is established, but requires second factor
+  verification.
+- **MFA_ENROLL:** The Session is established, but the user needs to enroll in a
+  second factor.
 
 ## User statuses
 
