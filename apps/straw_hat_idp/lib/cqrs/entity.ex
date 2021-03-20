@@ -13,6 +13,7 @@ defmodule StrawHat.Idp.Entity do
     quote do
       use Ecto.Schema
       alias StrawHat.Idp.Entity
+      alias __MODULE__
 
       @entity_identifier_key unquote(entity_identifier)
       @primary_key {@entity_identifier_key, :binary_id, autogenerate: true}
