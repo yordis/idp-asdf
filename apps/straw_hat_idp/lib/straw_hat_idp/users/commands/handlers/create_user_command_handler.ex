@@ -1,9 +1,8 @@
 defmodule StrawHat.Idp.CommandHandler.CreateUserCommandHandler do
-  @behaviour Commanded.Commands.Handler
+  use StrawHat.Commanded.CommandHandler
 
   alias StrawHat.Idp.Command.CreateUserCommand
   alias StrawHat.Idp.Entity.UserEntity
-  alias Commanded.Aggregate.Multi
 
   alias StrawHat.Idp.Event.{
     UserCreated,

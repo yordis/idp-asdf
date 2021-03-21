@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Command.ConsumeMagicLinkCommandHandler do
-  @behaviour Commanded.Commands.Handler
+  use StrawHat.Commanded.CommandHandler
 
   alias StrawHat.Idp.Command.ConsumeMagicLinkCommand
   alias StrawHat.Idp.Entity.MagicLinkEntity

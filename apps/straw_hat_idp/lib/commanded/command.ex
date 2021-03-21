@@ -1,4 +1,4 @@
-defmodule StrawHat.Idp.Command do
+defmodule StrawHat.Commanded.Command do
   def add_aggregate_id(command, value, key) do
     Map.put(command, key, value)
   end
@@ -12,7 +12,7 @@ defmodule StrawHat.Idp.Command do
 
     quote do
       use Ecto.Schema
-      alias StrawHat.Idp.Command
+      alias StrawHat.Commanded.Command
 
       @aggregate_identifier_key unquote(aggregate_identifier)
       @primary_key {@aggregate_identifier_key, :binary_id, autogenerate: true}

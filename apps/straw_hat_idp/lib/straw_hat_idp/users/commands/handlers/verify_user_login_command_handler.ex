@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Command.VerifyUserLoginCommandHandler do
-  @behaviour Commanded.Commands.Handler
+  use StrawHat.Commanded.CommandHandler
 
   alias StrawHat.Idp.Command.VerifyUserLoginCommand
   alias StrawHat.Idp.Entity.UserEntity

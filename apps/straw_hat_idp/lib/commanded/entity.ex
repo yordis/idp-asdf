@@ -1,4 +1,4 @@
-defmodule StrawHat.Idp.Entity do
+defmodule StrawHat.Commanded.Entity do
   def add_entity_id(command, value, key) do
     Map.put(command, key, value)
   end
@@ -12,7 +12,7 @@ defmodule StrawHat.Idp.Entity do
 
     quote do
       use Ecto.Schema
-      alias StrawHat.Idp.Entity
+      alias StrawHat.Commanded.Entity
       alias __MODULE__
 
       @entity_identifier_key unquote(entity_identifier)

@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Command.ActivateUserCommandHandler do
-  @behaviour Commanded.Commands.Handler
+  use StrawHat.Commanded.CommandHandler
 
   alias StrawHat.Idp.Command.ActivateUserCommand
   alias StrawHat.Idp.Entity.UserEntity

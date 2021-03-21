@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Command.AttachEmailToMagicLinkCommandHandler do
-  @behaviour Commanded.Commands.Handler
+  use StrawHat.Commanded.CommandHandler
 
   alias StrawHat.Idp.Command.AttachEmailToMagicLinkCommand
   alias StrawHat.Idp.Entity.MagicLinkEntity
