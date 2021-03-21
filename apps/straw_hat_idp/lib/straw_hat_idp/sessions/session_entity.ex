@@ -15,6 +15,16 @@ defmodule StrawHat.Idp.Entity.SessionEntity do
     session
   end
   
+  @spec should_refresh?(t()) :: boolean()
+  def should_refresh?(%{expires_at: expires_at}) do
+    {:ok, dt, _} = DateTime.from_iso8601(expires_at)
+
+    case DateTime.diff(dt, DateTime.utc_now()) do
+      n when n < 15 * 60 -> true
+      _ -> false
+    end
+  end
+  
   @spec expires_at(integer()) :: String.t()
   def expires_at(expires_in) do
     DateTime.utc_now()
