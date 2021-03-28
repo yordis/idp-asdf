@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.ValueObject.UserProfile do
-  use StrawHat.Idp.ValueObject
+  use StrawHat.Commanded.ValueObject
 
   embedded_schema do
     field :login, :string

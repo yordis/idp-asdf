@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Event.MagicLinkCreated do
-  use StrawHat.Idp.ValueObject
+  use StrawHat.Commanded.ValueObject
 
   embedded_schema do
     field :user_id, :string

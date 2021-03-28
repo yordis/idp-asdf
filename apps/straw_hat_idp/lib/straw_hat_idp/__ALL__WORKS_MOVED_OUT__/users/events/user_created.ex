@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Event.UserCreated do
-  use StrawHat.Idp.ValueObject
+  use StrawHat.Commanded.ValueObject
 
   alias StrawHat.Idp.ValueObject.UserProfile
 

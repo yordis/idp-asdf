@@ -10,9 +10,6 @@ defmodule StrawHat.Idp.Supervisor do
     children = [
       StrawHat.Idp.Repo,
       StrawHat.Idp.Application,
-      StrawHat.Idp.EventHandlers.PasswordlessWorkflow,
-      #      StrawHat.Idp.Projectors.User,
-      #      StrawHat.Idp.Projectors.MagicLink,
       {Phoenix.PubSub, name: StrawHat.Idp.PubSub}
     ]
 

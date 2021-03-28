@@ -1,10 +1,9 @@
 defmodule StrawHat.Idp.Command.VerifyUserLoginCommand do
-  use StrawHat.Commanded.Command
+  use StrawHat.Commanded.Command, aggregate_identifier: :user_id
 
   alias StrawHat.Idp.Helpers
 
   embedded_schema do
-    field(:user_id, :string)
   end
 
   def new(attrs) do

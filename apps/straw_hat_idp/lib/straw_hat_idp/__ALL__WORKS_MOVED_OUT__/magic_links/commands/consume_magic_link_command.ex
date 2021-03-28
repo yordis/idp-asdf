@@ -1,10 +1,9 @@
 defmodule StrawHat.Idp.Command.ConsumeMagicLinkCommand do
-  use StrawHat.Commanded.Command
+  use StrawHat.Commanded.Command, aggregate_identifier: :user_id
 
   alias StrawHat.Idp.Helpers
 
   embedded_schema do
-    field(:user_id, :string)
     field(:session_id, :string)
   end
 

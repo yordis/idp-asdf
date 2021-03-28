@@ -6,6 +6,8 @@ config :vex,
     Vex.Validators
   ]
 
+config :commanded, type_provider: StrawHat.Idp.EventStore.TypeProvider
+
 config :straw_hat_idp, event_stores: [StrawHat.Idp.EventStore]
 
 config :commanded_ecto_projections, repo: StrawHat.Idp.Repo
