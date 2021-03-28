@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Sessions.Token do
-  use StrawHat.Idp.Aggregate
+  use StrawHat.Commanded.ValueObject
 
   embedded_schema do
     field :access_token, :string

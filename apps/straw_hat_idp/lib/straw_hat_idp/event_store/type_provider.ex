@@ -9,7 +9,7 @@ defmodule StrawHat.Idp.EventStore.TypeProvider do
 
   def to_string(event_struct) do
     raise ArgumentError,
-          "'#{inspect(event_struct)}' event is not registered." <>
+          "#{inspect(event_struct)} event is not registered in the event type mapper." <>
             "Please visit #{inspect(__MODULE__)} to register new events."
   end
 end

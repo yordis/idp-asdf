@@ -1,13 +1,19 @@
 defmodule StrawHat.Idp.Entity.SessionEntity do
-  use StrawHat.Idp.Entity, entity_identifier: :session_id
-  use StrawHat.Idp.Aggregate
+  use StrawHat.Commanded.Entity, entity_identifier: :session_id
+  use StrawHat.Commanded.Aggregate
+
+  @type t :: struct()
 
   embedded_schema do
-    field :access_token, :string
-    field :refresh_token, :string
-    field :user_id, :string
-    field :active, :boolean
-    field :expires_at, :boolean
+    field(:access_token, :string)
+    field(:refresh_token, :string)
+    field(:user_id, :string)
+    field(:active, :boolean)
+    field(:expires_at, :boolean)
+  end
+
+  def new(_attrs) do
+    %__MODULE__{}
   end
 
   # {

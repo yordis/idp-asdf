@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Entity.MagicLinkEntity do
-  use StrawHat.Idp.Entity, entity_identifier: :user_id
+  use StrawHat.Commanded.Entity, entity_identifier: :user_id
 
   embedded_schema do
     field :token, :string

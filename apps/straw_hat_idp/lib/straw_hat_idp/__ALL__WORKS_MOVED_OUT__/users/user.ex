@@ -1,5 +1,5 @@
 defmodule StrawHat.Idp.Entity.UserEntity do
-  use StrawHat.Idp.Entity, entity_identifier: :user_id
+  use StrawHat.Commanded.Entity, entity_identifier: :user_id
 
   alias StrawHat.Idp.ValueObject.{UserProfile, UserStatus}
 

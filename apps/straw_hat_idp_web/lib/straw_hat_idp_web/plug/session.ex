@@ -2,7 +2,7 @@ defmodule Strawhat.IdpWeb.Plug.Session do
   require Logger
 
   alias Plug.Conn
-  alias StrawHat.Idp.Session
+  alias StrawHat.Idp.Entity.SessionEntity, as: Session
 
   def init(opts), do: opts
 
@@ -30,7 +30,7 @@ defmodule Strawhat.IdpWeb.Plug.Session do
   defp set_session(conn, session) do
     case Session.expired?(session) do
       true ->
-        Conn.purge_session(conn, session)
+        purge_session(conn, session)
 
       false ->
         conn
@@ -64,17 +64,17 @@ defmodule Strawhat.IdpWeb.Plug.Session do
 
   defp store_session(conn, session) do
     conn
-    |> configure_session(renew: true)
-    |> put_session("idp_session", session)
+    |> Conn.configure_session(renew: true)
+    |> Conn.put_session("idp_session", session)
   end
 
   defp purge_session(conn, session) do
     Session.logout(session)
 
     conn
-    |> delete_session("idp_session")
-    |> assign(:current_user, nil)
+    |> Conn.delete_session("idp_session")
+    |> Conn.assign(:current_user, nil)
     |> Phoenix.Controller.redirect(to: "/")
-    |> halt()
+    |> Conn.halt()
   end
 end
