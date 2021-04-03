@@ -145,3 +145,5 @@ interface CreateUserRequest {
   credentials?: Credentials
 }
 ```
+
+https://stackoverflow.com/questions/49326118/what-is-the-file-with-p8-extension-apns-auth-key-jwt#:~:text=p8%20file%20contains%20the%20PRIVATE,is%20a%20base64%20formatted%20ASN.
