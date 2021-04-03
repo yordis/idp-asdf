@@ -6,7 +6,8 @@ defmodule StrawHat.Idp.Sessions.Token do
     field :refresh_token, :string
     field :id_token, :string
     field :token_type, :string
-    field :expires_at, :boolean
+    field :expires_at, :string
+    field :expires_in, :integer
   end
 
   # {
